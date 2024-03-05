@@ -23,7 +23,9 @@ public class LoginPageObjects extends SeleniumMethods {
 	}
 
 	public void InputCredentials(String Vusername, String Vpassword) {
+		ClearText(username);
 		sendKeys(username, Vusername);
+		ClearText(password);
 		sendKeys(password, Vpassword);
 
 	}

@@ -1,6 +1,5 @@
 package pageObjects;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -24,7 +23,7 @@ public class MaintenancePageObjects extends SeleniumMethods {
 	private By accessRecodrs = By.xpath("//li/a[normalize-space()=\"Access Records\"]");
 	private By input = By.xpath("//input[@placeholder='Type for hints...']");
 	private By selectVacancy = By.xpath("(//div[@role=\"listbox\"]/div[@role=\"option\"])[5]");
-	private By search_Text = By.xpath("//div[@role=\"listbox\"]/div/span[normalize-space()=\"Odis Adalwin\"]");
+	private By search_Text = By.xpath("(//div[@role=\"listbox\"]/div[@role=\"option\"]/span)[1]");
 	private By searchButton = By.xpath("//button[@type=\"submit\" and normalize-space()=\"Search\"]");
 	private By downloadButton = By.xpath("//button[@type=\"submit\" and normalize-space()=\"Download\"]");
 	

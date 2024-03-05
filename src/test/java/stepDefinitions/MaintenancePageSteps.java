@@ -3,7 +3,6 @@ package stepDefinitions;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.Then;
@@ -60,11 +59,6 @@ public class MaintenancePageSteps {
 		maintenancePageObjects.input(prop.getProperty("vacancy"));
 		Thread.sleep(2000);
 		maintenancePageObjects.selectVacancy();
-		maintenancePageObjects.searchButton();
-		maintenancePageObjects.purgeAll();
-		Thread.sleep(2000);
-		maintenancePageObjects.confirmPurge();
-		Thread.sleep(2000);
 	}
 
 	@Then("User will initiate search")
@@ -75,7 +69,10 @@ public class MaintenancePageSteps {
    
    @Then("user will click the purge button")
    public void user_will_click_the_purge_button() throws InterruptedException {
-
+	   maintenancePageObjects.purgeAll();
+		Thread.sleep(2000);
+		maintenancePageObjects.confirmPurge();
+		Thread.sleep(2000);
    }
 
 	@When("User will select the Employee Record")
