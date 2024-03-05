@@ -19,7 +19,7 @@ public class DirectoryPageObjects extends SeleniumMethods {
 	private By locationName = By.xpath("//div[normalize-space()=\"HQ - CA, USA\"]");
 	private By search_Button = By.xpath("//button[normalize-space()=\"Search\"]");
 	private By reset_Button = By.xpath("//button[normalize-space()=\"Reset\"]");
-	private By search_Text = By.xpath("//div[@role=\"listbox\"]/div/span[normalize-space()=\"Odis Adalwin\"]");
+	private By search_Text = By.xpath("(//div[@role=\"listbox\"]/div[@role=\"option\"]/span)[1]");
 
 	
 	

@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -41,6 +42,7 @@ public class SeleniumMethods {
 		el.clear();
 		el.sendKeys(str);
 	}
+	
 
 	// Store text from a locatorl
 	public String getText(By locator) {
@@ -48,6 +50,18 @@ public class SeleniumMethods {
 		return text;
 	}
 
+	public void ClearText(By locator) {
+		Actions actions = new Actions(driver);
+		WebElement element = driver.findElement(locator);
+		actions.click(element)
+		    .keyDown(Keys.CONTROL)
+		    .sendKeys("a")
+		    .keyUp(Keys.CONTROL)
+		    .sendKeys(Keys.BACK_SPACE)
+		    .build()
+		    .perform();
+	}
+	
 	
 	public void verifyTitle(String title) {
 		String actualTitle = driver.getTitle();

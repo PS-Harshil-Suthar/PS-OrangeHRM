@@ -53,15 +53,6 @@ public class DirectoryPageSteps {
 		directoryPageObjects.inputName(prop.getProperty("name", Ename));
 		directoryPageObjects.clickOnName();
 		Thread.sleep(2000);
-//		directoryPageObjects.clickOnSelect();
-//		directoryPageObjects.clickOnSelectName();
-		
-//		directoryPageObjects.locationButton();
-//		directoryPageObjects.locationName();
-		
-//		directoryPageObjects.searchButton();
-
-//		directoryPageObjects.resetButton();
 	}
 	
 	@When("User selects a Job Title from the dropdown list")
